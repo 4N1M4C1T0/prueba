@@ -11,7 +11,7 @@
     <small id="mensaje" style="color: red;"></small><br/>
     Nro 2
     <input type="text" name="nro2" id="nro2"/><br/>
-    <button onclick="ejecutar()">Calcular</button>
+    <button onclick="elevevadoA">Calcular</button>
 
     <p id="resultado"> </p>
 </body>
@@ -32,6 +32,17 @@
 
     function alerta1(){
         document.getElementById("mensaje").innerHTML = "ha cambiado";
+    }
+
+    function elevevadoA(){
+        var base = document.getElementById("nro1").value;
+        var exponente = document.getElementById("nro2").value;
+        
+        for(var i = 0; i <= exponente; i++){
+            base *= base;
+        }
+
+        alert(base);
     }
 </script>
 </html>
