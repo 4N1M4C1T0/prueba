@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE C a F</title>
+</head>
+<body>
+    EN GRADOS C°
+    <input type="text" id="N"></br><br/>
+    CALCULAR:
+
+    <button onclick="calcular()">Ver resultado</button>
+    <p id="r"></p>
+</body>
+<script>
+    function f(c){
+        var r=(((9*c)+160)/5);
+        return r;
+    }
+
+    function calcular(){
+        var s=document.getElementById("N").value;
+        var x = f(s);
+        document.getElementById("r").innerHTML=s+" C° es igual a "+ x+" F°"
+    }
+</script>
+</html>

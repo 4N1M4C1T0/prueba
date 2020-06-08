@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de 3</title>
+</head>
+<body>
+    Numero 1 
+    <input type="text" id="a"></br><br/>
+    Numero 2 
+    <input type="text" id="b"></br><br/>
+    Numero 3 
+    <input type="text" id="c"></br><br/>
+    <button onclick="Comparar()">Comparar</button>
+    <p id="r"></p>
+</body>
+<script>
+    function Comparar(){
+        var l=[2];
+        l[0]=document.getElementById("a").value;
+        l[1]=document.getElementById("b").value;
+        l[2]=document.getElementById("c").value;
+        var x = 0;
+        var s=3;
+        for(var i=0 ; i<s; i++){
+            for(var j=i+1; j<s; j++){
+                if(l[i]>l[j]){
+                    x=l[i];
+                    l[i]=l[j];
+                    l[j]=x;
+                }
+                
+            }
+        }
+        document.getElementById("r").innerHTML="El mayor es "+l[2];
+    }
+</script>
+</html>
